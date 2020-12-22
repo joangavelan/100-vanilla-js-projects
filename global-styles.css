@@ -1,0 +1,121 @@
+:root {
+    /* base colors */
+    --color-green-light: #CCFE57;
+    --color-yellow-light: #FFEC58;
+    --color-orange-light: #FFC66D;
+    /* neutral colors */
+    --color-gray-light: #F6F7F9;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-text: #2C2C2E;
+    /* fonts */
+    --main-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--main-font-stack);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    line-height: 1;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.container-md {
+    max-width: 1000px;
+    min-height: 700px;
+    border-radius: 5px;
+    padding: 3rem;
+}
+
+.container-sm {
+    max-width: 500px;
+    min-height: 400px;
+    padding: 4rem 3rem;
+    border-radius: 3px;
+}
+
+.title {
+    padding: 2rem;
+    font-size: 4.6rem;
+}
+
+.btn {
+    padding: 1.4rem 2.5rem;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+/* Font sizes */
+.fSsm {font-size: 1.2rem;}
+.fSmd {font-size: 1.7rem;}
+.fSbg {font-size: 2.3rem;}
+.fSlg {font-size: 3.6rem;}
+.fShg {font-size: 16rem;}
+
+/* line heights */
+
+
+/* Margins */
+/* v-h */
+.m1 {margin: 1rem;}
+.m2 {margin: 2rem;}
+.m2-5 {margin: 2.5rem;}
+.m3 {margin: 3rem;}
+/* v */
+.mv1 {margin: 1rem 0;}
+.mv2 {margin: 2rem 0;}
+.mv3 {margin: 3rem 0;}
+/* h */
+.mh1 {margin: 0 1rem;}
+.mh2 {margin: 0 2rem;}
+.mh3 {margin: 0 3rem;}
+
+/* Paddings */
+.p1 {padding: 1rem;}
+.p2 {padding: 2rem;}
+.p3 {padding: 3rem;}
+
+.row {padding: 1.5rem;}
+
+
+/* Font weights */
+.fW300 {font-weight: 300;}
+.fW400 {font-weight: 400;}
+.fW500 {font-weight: 500;}
+.fW600 {font-weight: 600;}
+.fW700 {font-weight: 700;}
+.fW800 {font-weight: 800;}
+
+/* Colors */
+.c-white {color: white;}
+.c-dark {color: black;}
+.c-text {color: var(--color-text)}
+.c-green-light {color: var(--color-green-light);}
+.c-orange-light {color: var(--color-orange-light);}
+
+/* Borders */
+.bd-1 {border: 1px solid #010101;}
+/* radius */
+.bR5 {border-radius: 5px;}
+
+/* Box shadows */
+.box-shadow {box-shadow: 0px 7px 30px #dadada;}
