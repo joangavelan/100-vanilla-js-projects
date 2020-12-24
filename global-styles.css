@@ -3,6 +3,9 @@
     --color-green-light: #CCFE57;
     --color-yellow-light: #FFEC58;
     --color-orange-light: #FFC66D;
+    --color-orange-dark: #F5A623;
+    --color-blue-dark: #262A3F;
+    --color-blue-gray: #ABA5C0;
     /* neutral colors */
     --color-gray-light: #F6F7F9;
     --color-white: #fff;
@@ -29,7 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 .ta-center {
@@ -41,6 +44,13 @@ body {
     width: 120rem;
     height: 70rem;
     border-radius: 7px;
+}
+
+.container-md-h {
+    position: relative;
+    width: 100rem;
+    height: 50rem;
+    border-radius: 5px;
 }
 
 .container-md {
@@ -74,6 +84,7 @@ body {
 /* Font sizes */
 .fSsm {font-size: 1.2rem;}
 .fSmd {font-size: 1.7rem;}
+.fSm2 {font-size: 2rem;}
 .fSbg {font-size: 2.3rem;}
 .fSlg {font-size: 3.6rem;}
 .fShg {font-size: 16rem;}
@@ -87,19 +98,32 @@ body {
 .m2 {margin: 2rem;}
 .m2-5 {margin: 2.5rem;}
 .m3 {margin: 3rem;}
+.m4 {margin: 4rem;}
+.m5 {margin: 5rem;}
 /* v */
 .mv1 {margin: 1rem 0;}
 .mv2 {margin: 2rem 0;}
 .mv3 {margin: 3rem 0;}
+.mv4 {margin: 4rem 0;}
 /* h */
 .mh1 {margin: 0 1rem;}
 .mh2 {margin: 0 2rem;}
 .mh3 {margin: 0 3rem;}
+.mh4 {margin: 0 4rem;}
+/* margin top */
+.mt05 {margin-top: 5px;}
+.mt1 {margin-top: 1rem;}
 
 /* Paddings */
 .p1 {padding: 1rem;}
 .p2 {padding: 2rem;}
 .p3 {padding: 3rem;}
+.p4 {padding: 4rem;}
+.p5 {padding: 5rem;}
+/* h */
+.ph3 {padding: 0 3rem;}
+.ph5 {padding: 0 5rem;}
+.ph6 {padding: 0 6rem;}
 
 .row {padding: 1.5rem;}
 
@@ -118,6 +142,9 @@ body {
 .c-text {color: var(--color-text)}
 .c-green-light {color: var(--color-green-light);}
 .c-orange-light {color: var(--color-orange-light);}
+.c-blue-dark {color: var(--color-blue-dark);}
+.c-blue-gray {color: var(--color-blue-gray);}
+.c-orange-dark {color: var(--color-orange-dark);}
 
 /* Borders */
 .bd-1 {border: 1px solid #010101;}
@@ -127,3 +154,30 @@ body {
 
 /* Box shadows */
 .box-shadow {box-shadow: 0px 7px 30px #dadada;}
+.box-shadow-blue {box-shadow: 0 10px 50px #F2F1F6;}
+
+/* Components */
+/* Slider */
+.slider-btn {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    font-size: 3.2rem;
+    border-radius: 50px;
+    top: 46.5%;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(242, 242, 248);
+}
+.previous {left: -2.5%;}
+.next {right: -2.5%;}
+
+/* avatar image*/
+.persona-picture {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+}
