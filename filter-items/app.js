@@ -2,6 +2,7 @@ import Products from './products.js';
 
 const searchInput = document.querySelector('#search');
 const galleryEl = document.querySelector('.gallery');
+const categoryLinks = document.getElementsByClassName('category-link');
 
 const renderItems = (value = Products) => {
     let markup = '';
@@ -37,5 +38,12 @@ searchInput.addEventListener('input', event => {
         renderItems();
     }
 })
+
+for(let link of categoryLinks) {
+    link.addEventListener('click', function() {
+        const category = this.getAttribute('href').substring(1);
+        category === 'all' ? renderItems() : filterItems(category);
+    })
+}
 
 renderItems();
