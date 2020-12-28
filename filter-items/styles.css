@@ -52,6 +52,10 @@ nav input {
     cursor: pointer;
 }
 
+.product__data {
+    margin: 1rem 0 1.5rem;
+}
+
 .product__name {
     font-size: 1.6rem;
     font-weight: 400;
