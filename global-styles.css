@@ -8,6 +8,7 @@
     --color-blue-gray: #ABA5C0;
     /* neutral colors */
     --color-gray-light: #F6F7F9;
+    --color-gray-dark: #555;
     --color-white: #fff;
     --color-black: #000;
     --color-text: #2C2C2E;
@@ -27,7 +28,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     font-family: var(--main-font-stack);
     display: flex;
     justify-content: center;
