@@ -1,20 +1,18 @@
-.fi-container {
+html {
+    overflow-y: scroll;
+}
+
+.app {
     width: 145rem;
     color: var(--color-text-dark);
-    height: 100%;
     align-self: flex-start;
 }
 
 .gallery {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
     list-style-type: none;
-}
-
-.product {
-    width: calc(25% - 3rem);
-    margin: 1.5rem;
 }
 
 .nav {
@@ -22,7 +20,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 3rem 1.5rem;
+    margin: 3rem 0;
     border-bottom: 1px solid #b8b8b8;
 }
 
@@ -53,7 +51,6 @@ nav input {
 /* product */
 .product__image {
     width: 100%;
-    height: auto;
     cursor: pointer;
 }
 
@@ -73,7 +70,14 @@ nav input {
 
 
 @media only screen and (max-width: 600px) {
-    .product {
+    .app {
         width: 100%;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
     }
 }

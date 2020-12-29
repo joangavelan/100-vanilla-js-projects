@@ -4,7 +4,7 @@ const searchInput = document.querySelector('#search');
 const galleryEl = document.querySelector('.gallery');
 const categoryLinks = document.getElementsByClassName('category-link');
 
-const renderItems = (value = Products) => {
+const renderAllItems = (value = Products) => {
     let markup = '';
     value.forEach(product => {
         markup += `
@@ -20,30 +20,30 @@ const renderItems = (value = Products) => {
     galleryEl.innerHTML = markup;
 }
 
-const filterItems = searchQuery => {
-    renderItems(Products.filter(product => {
-        const value = searchQuery.toLowerCase();
-        return product.price.toString().includes(value) || product.name.toLowerCase().includes(value) || product.category.toLowerCase().includes(value);
+//helper function to refine strings
+const clean = str => str.trim().toLowerCase().replace(/[^\w\s]/gi, '');
+
+//function that filters items by passed value
+const filterItems = value => {
+    renderAllItems(Products.filter(product => {
+        value = clean(value);
+        return product.price.toString().includes(value) || product.category.toLowerCase().includes(value) || product.name.toLowerCase().includes(value);
     }))
 }
 
+//filter items by search query
 searchInput.addEventListener('input', event => {
-    let searchValue = event.target.value;
-    
-    if(searchValue.trim().length > 0) {
-        searchValue = searchValue.trim().toLowerCase();
-        filterItems(searchValue);
-    } 
-    else {
-        renderItems();
-    }
+    let searchQuery = clean(event.target.value);
+    searchQuery ? filterItems(searchQuery) : renderAllItems();
 })
 
+//filter items by category links
 for(let link of categoryLinks) {
     link.addEventListener('click', function() {
         const category = this.getAttribute('href').substring(1);
-        category === 'all' ? renderItems() : filterItems(category);
+        category === 'all' ? renderAllItems() : filterItems(category);
     })
 }
 
-renderItems();
+//initial render
+renderAllItems();
