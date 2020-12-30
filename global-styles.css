@@ -160,32 +160,6 @@ body {
 .box-shadow {box-shadow: 0px 7px 30px #dadada;}
 .box-shadow-blue {box-shadow: 0 10px 50px #F2F1F6;}
 
-/* Components */
-/* Slider */
-.slider-btn {
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    font-size: 3.2rem;
-    border-radius: 50px;
-    top: 46.5%;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-    background-color: rgb(242, 242, 248);
-}
-.previous {left: -2.5%;}
-.next {right: -2.5%;}
-
-/* avatar image*/
-.persona-picture {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50px;
-}
-
 
 @media only screen and (max-width: 600px) {
     .title {

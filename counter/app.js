@@ -1,6 +1,4 @@
 const counterEl = document.querySelector('.counter');
-const addButtonEl = document.querySelector('.add-count');
-const lowerButtonEl = document.querySelector('.lower-count');
 
 let counter = 0;
 

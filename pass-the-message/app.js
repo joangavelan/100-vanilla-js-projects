@@ -13,9 +13,9 @@ formEl.addEventListener('submit', event => {
     }
     //if there's no data in the input display error message and remove it after 2 seconds
     else {
-        errorMessageEl.classList.add('display-error');
+        errorMessageEl.classList.add('display');
         setTimeout(() => {
-            errorMessageEl.classList.remove('display-error');       
+            errorMessageEl.classList.remove('display');       
         }, 2000);
     }
 })

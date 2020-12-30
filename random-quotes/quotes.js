@@ -1,17 +1,12 @@
 const Quotes = [
     {
         author: 'Nelson Mandela',
-        quote: 'The greatest glory of living lies not in never falling, but in rising every time we fall'
+        quote: 'The greatest glory of living lies not in never falling, but in rising every time we fall.'
     },
 
     {
         author: 'Walt Disney',
-        quote: 'The way to get started is to quit talking and begin doing'
-    },
-
-    {
-        author: 'Steve Jobs',
-        quote: 'Your time is limited, so don\’t waste it living someone else\’s life. Don\’t be trapped by dogma – which is living with the results of other people\’s thinking.'
+        quote: 'The way to get started is to quit talking and begin doing.'
     },
 
     {

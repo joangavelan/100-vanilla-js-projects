@@ -2,7 +2,7 @@ const App = (() => {
     const images = document.querySelectorAll('img');
     const modalEl = document.querySelector('.modal');
     const modalImageEl = document.querySelector('.modal__image');
-    const switchIcons = document.getElementsByClassName('switch');
+    const sliderButtons = document.getElementsByClassName('slider-btn');
     
     const openModal = image => {
         modalEl.classList.add('active');
@@ -19,12 +19,12 @@ const App = (() => {
     }
 
     const slider = index => {
-        for(let icon of switchIcons) {
-            icon.addEventListener('click', () => {
-                if(icon.classList.contains('next')) {
+        for(let sliderButton of sliderButtons) {
+            sliderButton.addEventListener('click', () => {
+                if(sliderButton.classList.contains('next')) {
                     index < (images.length - 1) ? index++ : index = 0;
                 }
-                if(icon.classList.contains('previous')) {
+                if(sliderButton.classList.contains('previous')) {
                     index > 0 ? index-- : index = (images.length - 1);
                 }
             modalImageEl.innerHTML = images[index].outerHTML;
