@@ -21,7 +21,6 @@ body {
 
 .output {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 1rem 2rem;
@@ -31,7 +30,6 @@ body {
     background-color: transparent;
     border-bottom: 1px solid rgb(32, 35, 37);
     color: var(--color-dark-3);
-    font-weight: 600;
 }
 
 input {
