@@ -18,7 +18,7 @@ const App = (() => {
         })
     }
 
-    const switchImage = index => {
+    const slider = index => {
         for(let icon of switchIcons) {
             icon.addEventListener('click', () => {
                 if(icon.classList.contains('next')) {
@@ -37,7 +37,7 @@ const App = (() => {
             image.addEventListener('click', function() {
                 const clickedImage = this.outerHTML; 
                 openModal(clickedImage);
-                switchImage(index);
+                slider(index);
                 closeModal();
             })
         })
