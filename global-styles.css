@@ -62,6 +62,15 @@ body {
     border-radius: 5px;
 }
 
+
+.container-sm-x {
+    position: relative;
+    width: 73rem;
+    min-height: 45rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
 .container-sm {
     max-width: 500px;
     min-height: 400px;
@@ -88,7 +97,7 @@ body {
 .fSxm {font-size: 1.6rem;}
 .fSmd {font-size: 1.7rem;}
 .fSm2 {font-size: 2rem;}
-.fSbg {font-size: 2.3rem;}
+.fSbg {font-size: 2.3rem;}  
 .fSlg {font-size: 3.6rem;}
 .fSxg {font-size: 5.6rem;}
 .fShg {font-size: 16rem;}
@@ -117,6 +126,7 @@ body {
 /* margin top */
 .mt05 {margin-top: 5px;}
 .mt1 {margin-top: 1rem;}
+.mt5 {margin-top: 5rem;}
 
 /* Paddings */
 .p1 {padding: 1rem;}
@@ -154,6 +164,7 @@ body {
 .bd-1 {border: 1px solid #010101;}
 /* radius */
 .bR5 {border-radius: 5px;}
+.bR10 {border-radius: 10px;}
 .bR50 {border-radius: 50px;}
 
 /* Box shadows */
