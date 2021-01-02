@@ -98,6 +98,7 @@ body {
 .fSmd {font-size: 1.7rem;}
 .fSm2 {font-size: 2rem;}
 .fSbg {font-size: 2.3rem;}  
+.fSb2 {font-size: 2.7rem;}
 .fSlg {font-size: 3.6rem;}
 .fSxg {font-size: 5.6rem;}
 .fShg {font-size: 16rem;}
@@ -166,6 +167,12 @@ body {
 .bR5 {border-radius: 5px;}
 .bR10 {border-radius: 10px;}
 .bR50 {border-radius: 50px;}
+
+/* display */
+.none {display: none;}
+.flex {display: flex}
+.block {display: block;}
+.grid {display: grid;}
 
 /* Box shadows */
 .box-shadow {box-shadow: 0px 7px 30px #dadada;}
