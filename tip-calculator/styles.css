@@ -122,7 +122,6 @@ input[type=number]::-webkit-outer-spin-button {
 .error-messages {display: none;}
 .error-message {display: none;}
 .loading-bars {display: none;}
-.results {display: none;}
 
 /* displays */
 .show {display: block;}

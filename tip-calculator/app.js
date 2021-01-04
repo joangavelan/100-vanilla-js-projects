@@ -60,7 +60,6 @@ const App = (() => {
         setTimeout(() => {
             loadingBars('off')
             resultsEl.innerHTML = markup;
-            resultsEl.classList.add('show');
         }, 2000);
     }
     
@@ -82,7 +81,6 @@ const App = (() => {
         billShareInput.value = '';
         rateInputEl.value = '';
         resultsEl.innerHTML = '';
-        resultsEl.classList.remove('show');
         inputStatus('enable');
         toggleButton();
         billAmountInput.focus();
