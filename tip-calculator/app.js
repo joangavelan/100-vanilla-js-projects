@@ -1,6 +1,6 @@
 const App = (() => {
     const errorMessagesBox = document.querySelector('.error-messages');
-    const errorMessages = document.getElementsByClassName('error-message');
+    const ERROR_MESSAGES = document.getElementsByClassName('error-message');
     const closeIcon = document.querySelector('.close');
     const billAmountInput = document.querySelector('.input__bill-amount');
     const billShareInput = document.querySelector('.input__bill-share');
@@ -12,10 +12,10 @@ const App = (() => {
     const calcButton = document.querySelector('.calc');
     const newCalcButton = document.querySelector('.new-calc');
     
-    const showErrorMessage = (reference) => {
+    const showErrorMessage = (emptyInput) => {
         errorMessagesBox.classList.add('show');
-        for(let errorMessage of errorMessages) {
-            if(errorMessage.dataset.errorReference === reference) errorMessage.classList.add('show');
+        for(let errorMessage of ERROR_MESSAGES) {
+            if(errorMessage.dataset.inputReference === emptyInput) errorMessage.classList.add('show');
             else errorMessage.classList.remove('show');
         }
     }
