@@ -9,8 +9,8 @@ const App = (() => {
     const loadingBarsEl = document.querySelector('.loading-bars');
     const resultsEl = document.querySelector('.results');
     const BUTTONS = document.getElementsByClassName('btn');
-    const defaultCalcBtn = document.querySelector('.default');
-    const newCalcBtn = document.querySelector('.new');
+    const startCalcButton = document.querySelector('.start');
+    const newCalcButton = document.querySelector('.new');
     
     const showErrorMessage = (reference) => {
         errorMessagesBox.classList.add('show');
@@ -21,24 +21,24 @@ const App = (() => {
     }
     
     const displayErrors = () => {
-        const emptyValues = [];
+        const emptyInputs = [];
     
         for(let input of INPUTS) {
-            input.value === '' ? emptyValues.push(input.dataset.id) : null;
+            input.value === '' ? emptyInputs.push(input.dataset.id) : null;
         }
     
-        const emptyInput = emptyValues[0];
-        emptyValues.length > 1 ? showErrorMessage('general') : showErrorMessage(emptyInput);
+        const emptyInput = emptyInputs[0];
+        emptyInputs.length > 1 ? showErrorMessage('general') : showErrorMessage(emptyInput);
     }
 
     const loadingBars = (status) => {
         if(status === 'on') {
             loadingBarsEl.classList.add('show');
-            defaultCalcBtn.disabled = true;
+            startCalcButton.disabled = true;
         }
         else if(status === 'off') {
             loadingBarsEl.classList.remove('show');
-            defaultCalcBtn.removeAttribute('disabled');
+            startCalcButton.removeAttribute('disabled');
         }
         else console.log('You need to set a proper status: (on/off)')
     }
@@ -71,8 +71,8 @@ const App = (() => {
     }
     
     const toggleButton = () => {
-        defaultCalcBtn.classList.toggle('show');
-        newCalcBtn.classList.toggle('show');
+        startCalcButton.classList.toggle('show');
+        newCalcButton.classList.toggle('show');
     }
 
     const inputStatus = (status) => {
@@ -91,7 +91,7 @@ const App = (() => {
         inputStatus('enabled');
         toggleButton();
         billAmountInput.focus();
-        defaultCalcBtn.textContent = 'Calculate';
+        startCalcButton.textContent = 'Calculate';
     }
     
     const removeErrorMessagesBox = () => errorMessagesBox.classList.remove('show');
@@ -100,7 +100,7 @@ const App = (() => {
         //button functionalities
         for(let button of BUTTONS) {
             button.addEventListener('click', () => {
-                if(button.classList.contains('default')) {
+                if(button.classList.contains('start')) {
                     const bill = billAmountInput.value;
                     const share = billShareInput.value;
                     const rate = rateInputEl.value;
@@ -109,7 +109,7 @@ const App = (() => {
                         getResults(bill,share,rate);
                         removeErrorMessagesBox();
                         inputStatus('disabled');
-                        defaultCalcBtn.textContent = 'Calculating...';
+                        startCalcButton.textContent = 'Calculating...';
                     } 
                     else displayErrors();
                 }
