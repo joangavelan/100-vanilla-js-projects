@@ -32,8 +32,14 @@ const App = (() => {
     }
 
     const loadingBars = (status) => {
-        if(status === 'on') loadingBarsEl.classList.add('show');
-        else if(status === 'off') loadingBarsEl.classList.remove('show');
+        if(status === 'on') {
+            loadingBarsEl.classList.add('show');
+            defaultCalcBtn.disabled = true;
+        }
+        else if(status === 'off') {
+            loadingBarsEl.classList.remove('show');
+            defaultCalcBtn.removeAttribute('disabled');
+        }
         else console.log('You need to set a proper status: (on/off)')
     }
 
@@ -60,6 +66,7 @@ const App = (() => {
         setTimeout(() => {
             loadingBars('off')
             resultsEl.innerHTML = markup;
+            toggleButton();
         }, 2000);
     }
     
@@ -71,8 +78,8 @@ const App = (() => {
     const inputStatus = (status) => {
         for(let input of INPUTS) {
             if(status === 'disabled') input.setAttribute('disabled', true);
-            else if(status === 'enable')  input.removeAttribute('disabled');
-            else console.log('You need to set a proper status: (enable/disabled)')
+            else if(status === 'enabled')  input.removeAttribute('disabled');
+            else console.log('You need to set a proper status: (enabled/disabled)')
         }
     }
 
@@ -81,9 +88,10 @@ const App = (() => {
         billShareInput.value = '';
         rateInputEl.value = '';
         resultsEl.innerHTML = '';
-        inputStatus('enable');
+        inputStatus('enabled');
         toggleButton();
         billAmountInput.focus();
+        defaultCalcBtn.textContent = 'Calculate';
     }
     
     const removeErrorMessagesBox = () => errorMessagesBox.classList.remove('show');
@@ -100,15 +108,15 @@ const App = (() => {
                     if(bill && share && rate) {
                         getResults(bill,share,rate);
                         removeErrorMessagesBox();
-                        toggleButton();
-                        inputStatus('disabled')
-                    } else {
-                        displayErrors();
-                    }
+                        inputStatus('disabled');
+                        defaultCalcBtn.textContent = 'Calculating...';
+                    } 
+                    else displayErrors();
                 }
                 else reset();
             })
-        }    
+        }
+        // console.log(startCalcButton)
         //closes error messages box
         closeIcon.addEventListener('click', removeErrorMessagesBox)
     }
