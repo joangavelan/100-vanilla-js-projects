@@ -14,35 +14,36 @@
         <h1 class="fW600 c-white ta-center">TIP CALCULATOR</h1>
       </div>
       <div class="main p3">
-        <div class="error-messages ta-center fSxm">
-          <p data-em="all" class="error-message">Please fill in the fields</p>
-          <p data-em="bill" class="error-message">Please specify a bill amount</p>
-          <p data-em="people" class="error-message">Specify how many people will be tipped</p>
-          <p data-em="service" class="error-message">You must select a service rate</p>
+        <div class="error-messages ta-center fSxm mb2">
+          <p data-error-reference="general" class="error-message">Please fill in the fields</p>
+          <p data-error-reference="bill" class="error-message">Please specify a bill amount</p>
+          <p data-error-reference="people" class="error-message">Please specify how many people will pay the bill</p>
+          <p data-error-reference="service-rate" class="error-message">You must select a service rate</p>
+          <div class="close"><i class="fas fa-times"></i></div>
         </div>
-        <div class="entry-row mv2">
+        <div class="entry-row">
           <h3 class="fSm2 fW500">How much was your bill?</h3>
           <div class="entry mv1">
             <div class="icon-box"><i class="fas fa-dollar-sign"></i></div>
-            <input type="number">
-          </div>
+            <input type="number" data-id="bill" class="input input__bill-amount" autofocus>
+          </div> 
         </div>
 
         <div class="entry-row mv2">
           <h3 class="fSm2 fW500">How many people sharing the bill?</h3>
           <div class="entry mt1">
             <div class="icon-box"><i class="fas fa-user"></i></i></div>
-            <input type="number">
+            <input type="number" data-id="people" class="input input__bill-share" onkeydown="if(event.key==='.'){event.preventDefault();}" oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
           </div>
         </div>
 
         <div class="entry-row mv2">
           <h3 class="fSm2 fW500">How was your service?</h3>
-          <select>
-            <option selected>Choose...</option>
-            <option data-service-rate="great">Great 20%</option>
-            <option data-service-rate="good">Good 10%</option>
-            <option data-service-rate="bad">Great 2%</option>
+          <select data-id="service-rate" class="input input__rate-select">
+            <option selected value="">Choose...</option>
+            <option value="20">Great 20%</option>
+            <option value="10">Good 10%</option>
+            <option value="2">Bad 2%</option>
           </select>
         </div>
 
@@ -58,8 +59,8 @@
           <p>Each person owes: <span>$ 4.60</span></p>
         </div>
 
-        <button class="calc btn">Calculate</button>
-        <button class="calc btn">New tip calculation</button>
+        <button class="default btn show">Calculate</button>
+        <button class="new btn">New tip calculation</button>
       </div>
   </div>
   <script src="app.js"></script>
