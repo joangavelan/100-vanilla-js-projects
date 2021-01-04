@@ -9,8 +9,8 @@ const App = (() => {
     const loadingBarsEl = document.querySelector('.loading-bars');
     const resultsEl = document.querySelector('.results');
     const BUTTONS = document.getElementsByClassName('btn');
-    const startCalcButton = document.querySelector('.start');
-    const newCalcButton = document.querySelector('.new');
+    const calcButton = document.querySelector('.calc');
+    const newCalcButton = document.querySelector('.new-calc');
     
     const showErrorMessage = (reference) => {
         errorMessagesBox.classList.add('show');
@@ -56,35 +56,35 @@ const App = (() => {
             <p>Total amount: <span>$ ${beautifiedNum(total)}</span></p>
             <p>Each person owes: <span>$ ${beautifiedNum(each)}</span></p>
         `
-        //hiding loading bars and showing results after 2 seconds
+        //hiding loading bars and showing results after 2 seconds - initial calc button toggled to new tip calc button
         setTimeout(() => {
-            loadingBars('off')
+            loadingBars('off');
             resultsEl.innerHTML = markup;
             toggleButton();
         }, 2000);
     }
     
     const toggleButton = () => {
-        startCalcButton.classList.toggle('show');
+        calcButton.classList.toggle('show');
         newCalcButton.classList.toggle('show');
     }
 
     const inputStatus = (status) => {
         for(let input of INPUTS) {
             if(status === 'disabled') input.setAttribute('disabled', true);
-            else if(status === 'enabled')  input.removeAttribute('disabled');
+            else if(status === 'enabled') input.removeAttribute('disabled');
             else console.log('You need to set a proper status: (enabled/disabled)')
         }
     }
 
     const calcButtonState = (status) => {
         if(status === 'calculating') {
-            startCalcButton.textContent = 'Calculating...';
-            startCalcButton.disabled = true;
+            calcButton.textContent = 'Calculating...';
+            calcButton.disabled = true;
         }
         else if('initial') {
-            startCalcButton.textContent = 'Calculate';
-            startCalcButton.removeAttribute('disabled');
+            calcButton.textContent = 'Calculate';
+            calcButton.removeAttribute('disabled');
         }
         else console.log('You need to set a proper status: (calculating/initial)')
     }
@@ -106,7 +106,7 @@ const App = (() => {
         //button functionalities
         for(let button of BUTTONS) {
             button.addEventListener('click', () => {
-                if(button.classList.contains('start')) {
+                if(button.classList.contains('calc')) {
                     const bill = billAmountInput.value;
                     const share = billShareInput.value;
                     const rate = rateInputEl.value;
