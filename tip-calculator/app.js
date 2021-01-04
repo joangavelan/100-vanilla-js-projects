@@ -82,6 +82,7 @@ const App = (() => {
         billShareInput.value = '';
         rateInputEl.value = '';
         resultsEl.innerHTML = '';
+        resultsEl.classList.remove('show');
         inputStatus('enable');
         toggleButton();
         billAmountInput.focus();
