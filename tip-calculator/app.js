@@ -32,14 +32,8 @@ const App = (() => {
     }
 
     const loadingBars = (status) => {
-        if(status === 'on') {
-            loadingBarsEl.classList.add('show');
-            startCalcButton.disabled = true;
-        }
-        else if(status === 'off') {
-            loadingBarsEl.classList.remove('show');
-            startCalcButton.removeAttribute('disabled');
-        }
+        if(status === 'on') loadingBarsEl.classList.add('show');
+        else if(status === 'off') loadingBarsEl.classList.remove('show');
         else console.log('You need to set a proper status: (on/off)')
     }
 
@@ -83,6 +77,18 @@ const App = (() => {
         }
     }
 
+    const calcButtonState = (status) => {
+        if(status === 'calculating') {
+            startCalcButton.textContent = 'Calculating...';
+            startCalcButton.disabled = true;
+        }
+        else if('initial') {
+            startCalcButton.textContent = 'Calculate';
+            startCalcButton.removeAttribute('disabled');
+        }
+        else console.log('You need to set a proper status: (calculating/initial)')
+    }
+
     const reset = () => {
         billAmountInput.value = '';
         billShareInput.value = '';
@@ -91,7 +97,7 @@ const App = (() => {
         inputStatus('enabled');
         toggleButton();
         billAmountInput.focus();
-        startCalcButton.textContent = 'Calculate';
+        calcButtonState('initial');
     }
     
     const removeErrorMessagesBox = () => errorMessagesBox.classList.remove('show');
@@ -109,14 +115,13 @@ const App = (() => {
                         getResults(bill,share,rate);
                         removeErrorMessagesBox();
                         inputStatus('disabled');
-                        startCalcButton.textContent = 'Calculating...';
+                        calcButtonState('calculating');
                     } 
                     else displayErrors();
                 }
                 else reset();
             })
         }
-        // console.log(startCalcButton)
         //closes error messages box
         closeIcon.addEventListener('click', removeErrorMessagesBox)
     }
