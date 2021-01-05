@@ -96,11 +96,11 @@ const App = (() => {
         resultsEl.innerHTML = '';
         inputsState('enabled');
         toggleButton();
-        billAmountInput.focus();
         calcButtonState('initial');
+        billAmountInput.focus();
     }
     
-    const removeErrorMessagesBox = () => errorMessagesBox.classList.remove('show');
+    const removeErrorMessage = () => errorMessagesBox.classList.remove('show');
     
     const listeners = () => {
         //-calc- and -new tip calc- button functionalities
@@ -113,7 +113,7 @@ const App = (() => {
         
                     if(bill && share && rate) {
                         getResults(bill,share,rate);
-                        removeErrorMessagesBox();
+                        removeErrorMessage();
                         inputsState('disabled');
                         calcButtonState('calculating');
                     } 
@@ -123,7 +123,7 @@ const App = (() => {
             })
         }
         //closes error messages box
-        closeIcon.addEventListener('click', removeErrorMessagesBox)
+        closeIcon.addEventListener('click', removeErrorMessage)
     }
 
     return {
