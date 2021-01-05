@@ -2,10 +2,10 @@ const App = (() => {
     const errorMessagesBox = document.querySelector('.error-messages');
     const ERROR_MESSAGES = document.getElementsByClassName('error-message');
     const closeIcon = document.querySelector('.close');
+    const INPUTS = document.getElementsByClassName('input');
     const billAmountInput = document.querySelector('.input__bill-amount');
     const billShareInput = document.querySelector('.input__bill-share');
     const rateInputEl = document.querySelector('.input__rate-select');
-    const INPUTS = document.getElementsByClassName('input');
     const loadingBarsEl = document.querySelector('.loading-bars');
     const resultsEl = document.querySelector('.results');
     const BUTTONS = document.getElementsByClassName('btn');
