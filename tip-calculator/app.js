@@ -12,23 +12,23 @@ const App = (() => {
     const calcButton = document.querySelector('.calc');
     const newCalcButton = document.querySelector('.new-calc');
     
-    const showErrorMessage = (emptyInput) => {
+    const displayErrorMessage = () => {
         errorMessagesBox.classList.add('show');
-        for(let errorMessage of ERROR_MESSAGES) {
-            if(errorMessage.dataset.inputReference === emptyInput) errorMessage.classList.add('show');
-            else errorMessage.classList.remove('show');
-        }
-    }
-    
-    const displayErrors = () => {
         const emptyInputs = [];
-    
+        let inputErrorReference = '';
+        //Iterating through the inputs to find out which one is empty, then I push its data-id into the array 'emptyInputs'
         for(let input of INPUTS) {
             input.value === '' ? emptyInputs.push(input.dataset.id) : null;
         }
-    
-        const emptyInput = emptyInputs[0];
-        emptyInputs.length > 1 ? showErrorMessage('general') : showErrorMessage(emptyInput);
+        //If there is only one empty input, we pass its id as a reference to trigger the linked error message, if there is more than one empty input, we display the general error
+        inputErrorReference = (emptyInputs.length === 1) ? emptyInputs[0] :  'general';
+        //Iteration over the error messages to find the one linked to the error reference
+        for(let errorMessage of ERROR_MESSAGES) {
+            //Once identified it is displayed
+            if(errorMessage.dataset.inputReference === inputErrorReference) errorMessage.classList.add('show');
+            //The error message that has been displayed and no longer matches the error reference will be removed, this prevents more than one error message from being displayed at the same time
+            else errorMessage.classList.remove('show');
+        }
     }
 
     const loadingBars = (state) => {
@@ -117,7 +117,7 @@ const App = (() => {
                         inputState('disabled');
                         calcButtonState('calculating');
                     } 
-                    else displayErrors();
+                    else displayErrorMessage();
                 }
                 else reset();
             })
