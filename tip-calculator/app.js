@@ -103,7 +103,7 @@ const App = (() => {
     const removeErrorMessagesBox = () => errorMessagesBox.classList.remove('show');
     
     const listeners = () => {
-        //button functionalities
+        //-calc- and -new tip calc- button functionalities
         for(let button of BUTTONS) {
             button.addEventListener('click', () => {
                 if(button.classList.contains('calc')) {
