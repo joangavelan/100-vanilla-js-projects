@@ -36,9 +36,14 @@ const App = (() => {
         else if(status === 'off') loadingBarsEl.classList.remove('show');
         else console.log('You need to set a proper status: (on/off)')
     }
+    
+    const toggleButton = () => {
+        calcButton.classList.toggle('show');
+        newCalcButton.classList.toggle('show');
+    }
 
     const beautifiedNum = x => x.toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-     
+
     const getResults = (bill, share, rate) => {
         //loading while I get the results
         loadingBars('on');
@@ -62,11 +67,6 @@ const App = (() => {
             resultsEl.innerHTML = markup;
             toggleButton();
         }, 2000);
-    }
-    
-    const toggleButton = () => {
-        calcButton.classList.toggle('show');
-        newCalcButton.classList.toggle('show');
     }
 
     const inputStatus = (status) => {
