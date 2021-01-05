@@ -31,10 +31,10 @@ const App = (() => {
         emptyInputs.length > 1 ? showErrorMessage('general') : showErrorMessage(emptyInput);
     }
 
-    const loadingBars = (status) => {
-        if(status === 'on') loadingBarsEl.classList.add('show');
-        else if(status === 'off') loadingBarsEl.classList.remove('show');
-        else console.log('You need to set a proper status: (on/off)')
+    const loadingBars = (state) => {
+        if(state === 'on') loadingBarsEl.classList.add('show');
+        else if(state === 'off') loadingBarsEl.classList.remove('show');
+        else console.log('You need to set a proper loading state: (on/off)')
     }
     
     const toggleButton = () => {
@@ -69,16 +69,16 @@ const App = (() => {
         }, 2000);
     }
 
-    const inputStatus = (status) => {
+    const inputState = (state) => {
         for(let input of INPUTS) {
-            if(status === 'disabled') input.setAttribute('disabled', true);
-            else if(status === 'enabled') input.removeAttribute('disabled');
-            else console.log('You need to set a proper status: (enabled/disabled)')
+            if(state === 'disabled') input.setAttribute('disabled', true);
+            else if(state === 'enabled') input.removeAttribute('disabled');
+            else console.log('You need to set a proper input state: (enabled/disabled)')
         }
     }
 
-    const calcButtonState = (status) => {
-        if(status === 'calculating') {
+    const calcButtonState = (state) => {
+        if(state === 'calculating') {
             calcButton.textContent = 'Calculating...';
             calcButton.disabled = true;
         }
@@ -86,7 +86,7 @@ const App = (() => {
             calcButton.textContent = 'Calculate';
             calcButton.removeAttribute('disabled');
         }
-        else console.log('You need to set a proper status: (calculating/initial)')
+        else console.log('You need to set a proper calc-button state: (calculating/initial)')
     }
 
     const reset = () => {
@@ -94,7 +94,7 @@ const App = (() => {
         billShareInput.value = '';
         rateInputEl.value = '';
         resultsEl.innerHTML = '';
-        inputStatus('enabled');
+        inputState('enabled');
         toggleButton();
         billAmountInput.focus();
         calcButtonState('initial');
@@ -114,7 +114,7 @@ const App = (() => {
                     if(bill && share && rate) {
                         getResults(bill,share,rate);
                         removeErrorMessagesBox();
-                        inputStatus('disabled');
+                        inputState('disabled');
                         calcButtonState('calculating');
                     } 
                     else displayErrors();
