@@ -69,7 +69,7 @@ const App = (() => {
         }, 2000);
     }
 
-    const inputState = (state) => {
+    const inputsState = (state) => {
         for(let input of INPUTS) {
             if(state === 'disabled') input.setAttribute('disabled', true);
             else if(state === 'enabled') input.removeAttribute('disabled');
@@ -94,7 +94,7 @@ const App = (() => {
         billShareInput.value = '';
         rateInputEl.value = '';
         resultsEl.innerHTML = '';
-        inputState('enabled');
+        inputsState('enabled');
         toggleButton();
         billAmountInput.focus();
         calcButtonState('initial');
@@ -114,7 +114,7 @@ const App = (() => {
                     if(bill && share && rate) {
                         getResults(bill,share,rate);
                         removeErrorMessagesBox();
-                        inputState('disabled');
+                        inputsState('disabled');
                         calcButtonState('calculating');
                     } 
                     else displayErrorMessage();
