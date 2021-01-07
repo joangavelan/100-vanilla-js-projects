@@ -54,7 +54,7 @@ body {
 .todo-list {
     width: 100%;
     list-style-type: none;
-    margin: 3rem;
+    margin: 3rem 0;
     font-size: 1.8rem;
 }
 
@@ -72,11 +72,21 @@ body {
     margin-bottom: 1rem;
 }
 
-.check-circle {
-    font-size: 1.9rem;
-    padding: 2rem 2.5rem;
+.check {
+    width: 8rem;
+    height: 7rem;
+    position: relative;
+    font-size: 2rem;
     border-right: 1px solid var(--color-primary-light);
     cursor: pointer;
+    color: var(--color-fourth);
+}
+
+.check::before {
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .todo-list__item-content {
@@ -87,7 +97,7 @@ body {
     padding: 2rem 2.5rem;
 }
 
-.task {
+.todo {
     font-size: 2rem;
     font-weight: 500;
     color: #56506A;
@@ -97,4 +107,7 @@ i {cursor: pointer;}
 
 .delete {color: var(--color-tertiary);}
 
-.done {color: #DBD9E2;}
+.done {
+    color: #DBD9E2;
+    text-decoration: line-through;
+}
