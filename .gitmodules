@@ -1,0 +1,3 @@
+[submodule "employee-registration"]
+	path = employee-registration
+	url = https://github.com/joangavelan/employee-registration.git
