@@ -89,9 +89,7 @@ const App = (() => {
         }
     }
 
-    
     document.addEventListener('DOMContentLoaded', getTodos);
     INPUT.addEventListener('keydown', addTodo);
     LIST.addEventListener('click', actions)
-
 })();
