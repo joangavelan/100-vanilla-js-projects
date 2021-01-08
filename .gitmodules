@@ -25,3 +25,6 @@
 [submodule "pass-the-message"]
 	path = pass-the-message
 	url = https://github.com/joangavelan/pass-the-message.git
+[submodule "random-quotes"]
+	path = random-quotes
+	url = https://github.com/joangavelan/random-quotes.git
