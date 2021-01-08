@@ -21,7 +21,7 @@ const renderAllItems = (value = Products) => {
 }
 
 //helper function to refine strings
-const clean = str => str.trim().toLowerCase().replace(/[^\w\s]/gi, '');
+const clean = str => str.trim().toLowerCase();
 
 //function that filters items by passed value
 const filterItems = value => {
