@@ -10,3 +10,6 @@
 [submodule "calculator"]
 	path = calculator
 	url = https://github.com/joangavelan/calculator.git
+[submodule "carousel-modal"]
+	path = carousel-modal
+	url = https://github.com/joangavelan/carousel-modal.git
