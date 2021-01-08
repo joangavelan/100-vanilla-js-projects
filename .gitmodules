@@ -13,3 +13,6 @@
 [submodule "carousel-modal"]
 	path = carousel-modal
 	url = https://github.com/joangavelan/carousel-modal.git
+[submodule "filter-items"]
+	path = filter-items
+	url = https://github.com/joangavelan/filter-items.git
