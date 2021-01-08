@@ -31,3 +31,6 @@
 [submodule "testimonials"]
 	path = testimonials
 	url = https://github.com/joangavelan/testimonials.git
+[submodule "tip-calculator"]
+	path = tip-calculator
+	url = https://github.com/joangavelan/tip-calculator.git
