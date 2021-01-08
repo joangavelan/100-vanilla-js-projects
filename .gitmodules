@@ -1,3 +1,6 @@
 [submodule "employee-registration"]
 	path = employee-registration
 	url = https://github.com/joangavelan/employee-registration.git
+[submodule "change-color-background"]
+	path = change-color-background
+	url = https://github.com/joangavelan/change-color-background.git
