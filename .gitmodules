@@ -4,3 +4,6 @@
 [submodule "change-color-background"]
 	path = change-color-background
 	url = https://github.com/joangavelan/change-color-background.git
+[submodule "counter"]
+	path = counter
+	url = https://github.com/joangavelan/counter.git
