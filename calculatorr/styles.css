@@ -8,8 +8,25 @@
     --color-dark-3: #A6AFAE;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
 body {
     background: linear-gradient(#2D3134, #2D3134);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    line-height: 1.5;
 }
 
 .calculator {
@@ -70,11 +87,10 @@ input[type=number]::-webkit-outer-spin-button {
     border: 0;
     outline: 0;
     background-color: transparent;
-    transition: all .1s;
 }
 
-.calc-button:active {
-    transform: scale(0.9);
+.number:active {
+    border: 1px solid #191D1E;
 }
 
 .c {

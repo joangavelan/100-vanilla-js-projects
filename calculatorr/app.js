@@ -1,5 +1,5 @@
 const App = (() => {
-    const entryButtons = document.getElementsByClassName('calc-button');
+    const calcButtons = document.getElementsByClassName('calc-button');
     const entryEl = document.querySelector('.entry');
     const resultEl = document.querySelector('.result');
 
@@ -49,7 +49,7 @@ const App = (() => {
     const init = () => {
         resultEl.value = 0;
         
-        for(let button of entryButtons) {
+        for(let button of calcButtons) {
             button.addEventListener('click', function() {
                 const value = this;
                 workable(value) ? passValue(value) : execute(value);
