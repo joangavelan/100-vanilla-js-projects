@@ -22,3 +22,6 @@
 [submodule "image-slider"]
 	path = image-slider
 	url = https://github.com/joangavelan/image-slider.git
+[submodule "pass-the-message"]
+	path = pass-the-message
+	url = https://github.com/joangavelan/pass-the-message.git
