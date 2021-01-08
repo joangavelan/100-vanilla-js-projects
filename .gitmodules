@@ -19,3 +19,6 @@
 [submodule "hex-color-background-changer"]
 	path = hex-color-background-changer
 	url = https://github.com/joangavelan/hex-color-background-changer.git
+[submodule "image-slider"]
+	path = image-slider
+	url = https://github.com/joangavelan/image-slider.git
