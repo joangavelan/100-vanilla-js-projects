@@ -34,3 +34,6 @@
 [submodule "tip-calculator"]
 	path = tip-calculator
 	url = https://github.com/joangavelan/tip-calculator.git
+[submodule "to-do-list"]
+	path = to-do-list
+	url = https://github.com/joangavelan/to-do-list.git
