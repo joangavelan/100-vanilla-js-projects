@@ -28,3 +28,6 @@
 [submodule "random-quotes"]
 	path = random-quotes
 	url = https://github.com/joangavelan/random-quotes.git
+[submodule "testimonials"]
+	path = testimonials
+	url = https://github.com/joangavelan/testimonials.git
