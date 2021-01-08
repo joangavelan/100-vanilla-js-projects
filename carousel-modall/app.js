@@ -43,10 +43,18 @@ const App = (() => {
         })
     }
     
+    const listeners = () => {
+    window.addEventListener('keydown', event => {
+            if(event.keyCode === 27) modalEl.classList.remove('active');
+        })
+    }
+
     
     return {
-        carousel
+        carousel,
+        listeners
     }
 })();
 
 App.carousel();
+App.listeners();
