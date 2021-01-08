@@ -7,3 +7,6 @@
 [submodule "counter"]
 	path = counter
 	url = https://github.com/joangavelan/counter.git
+[submodule "calculator"]
+	path = calculator
+	url = https://github.com/joangavelan/calculator.git
