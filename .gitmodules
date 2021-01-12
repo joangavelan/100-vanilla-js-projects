@@ -37,3 +37,6 @@
 [submodule "to-do-list"]
 	path = to-do-list
 	url = https://github.com/joangavelan/to-do-list.git
+[submodule "countdown-timer"]
+	path = countdown-timer
+	url = https://github.com/joangavelan/countdown-timer.git
