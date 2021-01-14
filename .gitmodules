@@ -40,3 +40,6 @@
 [submodule "countdown-timer"]
 	path = countdown-timer
 	url = https://github.com/joangavelan/countdown-timer.git
+[submodule "password-generator"]
+	path = password-generator
+	url = https://github.com/joangavelan/password-generator.git
