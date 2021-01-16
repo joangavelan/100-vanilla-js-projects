@@ -43,3 +43,6 @@
 [submodule "password-generator"]
 	path = password-generator
 	url = https://github.com/joangavelan/password-generator.git
+[submodule "OOP-quiz-app"]
+	path = OOP-quiz-app
+	url = https://github.com/joangavelan/OOP-quiz-app.git
