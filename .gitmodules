@@ -55,3 +55,6 @@
 [submodule "roll-dice"]
 	path = roll-dice
 	url = https://github.com/joangavelan/roll-dice.git
+[submodule "sidebar-navigation"]
+	path = sidebar-navigation
+	url = https://github.com/joangavelan/sidebar-navigation.git
