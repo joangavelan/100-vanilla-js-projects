@@ -46,3 +46,6 @@
 [submodule "OOP-quiz-app"]
 	path = OOP-quiz-app
 	url = https://github.com/joangavelan/OOP-quiz-app.git
+[submodule "accordion"]
+	path = accordion
+	url = https://github.com/joangavelan/accordion.git
