@@ -58,3 +58,6 @@
 [submodule "sidebar-navigation"]
 	path = sidebar-navigation
 	url = https://github.com/joangavelan/sidebar-navigation.git
+[submodule "modal"]
+	path = modal
+	url = https://github.com/joangavelan/modal.git
