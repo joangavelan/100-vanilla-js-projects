@@ -1,1 +1,1 @@
-Understanding how Javascript works from the root by building 100 vanilla javascript projects. (21 of 100);
+Understanding how Javascript works from the root by building 100 vanilla javascript projects. (22 of 100);
