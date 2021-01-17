@@ -49,3 +49,6 @@
 [submodule "accordion"]
 	path = accordion
 	url = https://github.com/joangavelan/accordion.git
+[submodule "loading-bar"]
+	path = loading-bar
+	url = https://github.com/joangavelan/loading-bar.git
