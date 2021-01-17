@@ -52,3 +52,6 @@
 [submodule "loading-bar"]
 	path = loading-bar
 	url = https://github.com/joangavelan/loading-bar.git
+[submodule "roll-dice"]
+	path = roll-dice
+	url = https://github.com/joangavelan/roll-dice.git
