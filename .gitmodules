@@ -64,3 +64,6 @@
 [submodule "tabs-mouseover"]
 	path = tabs-mouseover
 	url = https://github.com/joangavelan/tabs-mouseover.git
+[submodule "progress-steps"]
+	path = progress-steps
+	url = https://github.com/joangavelan/progress-steps.git
