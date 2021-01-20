@@ -67,3 +67,6 @@
 [submodule "progress-steps"]
 	path = progress-steps
 	url = https://github.com/joangavelan/progress-steps.git
+[submodule "tabs-classic"]
+	path = tabs-classic
+	url = https://github.com/joangavelan/tabs-classic.git
