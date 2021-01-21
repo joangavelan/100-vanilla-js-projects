@@ -73,3 +73,6 @@
 [submodule "API-dad-jokes"]
 	path = API-dad-jokes
 	url = https://github.com/joangavelan/API-dad-jokes.git
+[submodule "API-movie-app"]
+	path = API-movie-app
+	url = https://github.com/joangavelan/API-movie-app.git
