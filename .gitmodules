@@ -70,6 +70,3 @@
 [submodule "tabs-classic"]
 	path = tabs-classic
 	url = https://github.com/joangavelan/tabs-classic.git
-[submodule "API-Dad-jokes"]
-	path = API-Dad-jokes
-	url = https://github.com/joangavelan/API-Dad-jokes.git
