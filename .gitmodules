@@ -76,3 +76,9 @@
 [submodule "API-movie-app"]
 	path = API-movie-app
 	url = https://github.com/joangavelan/API-movie-app.git
+[submodule "OOP-music-player"]
+	path = OOP-music-player
+	url = https://github.com/joangavelan/OOP-music-player.git
+[submodule "sound-board"]
+	path = sound-board
+	url = https://github.com/joangavelan/sound-board.git
