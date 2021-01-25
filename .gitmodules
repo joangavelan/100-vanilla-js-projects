@@ -79,3 +79,6 @@
 [submodule "sound-board"]
 	path = sound-board
 	url = https://github.com/joangavelan/sound-board.git
+[submodule "RMP-music-player"]
+	path = RMP-music-player
+	url = https://github.com/joangavelan/RMP-music-player.git
