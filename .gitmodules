@@ -82,3 +82,6 @@
 [submodule "RMP-music-player"]
 	path = RMP-music-player
 	url = https://github.com/joangavelan/RMP-music-player.git
+[submodule "API-weather-app"]
+	path = API-weather-app
+	url = https://github.com/joangavelan/API-weather-app.git
