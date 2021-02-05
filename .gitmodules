@@ -85,3 +85,6 @@
 [submodule "API-weather-app"]
 	path = API-weather-app
 	url = https://github.com/joangavelan/API-weather-app.git
+[submodule "API-github-profiles"]
+	path = API-github-profiles
+	url = https://github.com/joangavelan/API-github-profiles.git
